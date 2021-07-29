@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="kiplingcss.css">
+    <title>Book A Flight</title>
+
+
+    <style>
+      * {box-sizing: border-box}
+      body {font-family: Verdana, sans-serif; margin:0}
+      .mySlides {display: none}
+      img {vertical-align: middle;}
+      
+      /* Slideshow container */
+      .slideshow-container {
+        max-width: 1000px;
+        position: relative;
+        margin: auto;
+      }
+      
+      /* Next & previous buttons */
+      .prev, .next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        width: auto;
+        padding: 16px;
+        margin-top: -22px;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+        transition: 0.6s ease;
+        border-radius: 0 3px 3px 0;
+        user-select: none;
+      }
+      
+      /* Position the "next button" to the right */
+      .next {
+        right: 0;
+        border-radius: 3px 0 0 3px;
+      }
+      
+      /* On hover, add a black background color with a little bit see-through */
+      .prev:hover, .next:hover {
+        background-color: rgba(0,0,0,0.8);
+      }
+      
+      /* Caption text */
+      .text {
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 8px 12px;
+        position: absolute;
+        bottom: 8px;
+        width: 100%;
+        text-align: center;
+      }
+      
+      /* Number text (1/3 etc) */
+      .numbertext {
+        color: #f2f2f2;
+        font-size: 12px;
+        padding: 8px 12px;
+        position: absolute;
+        top: 0;
+      }
+      
+      /* The dots/bullets/indicators */
+      .dot {
+        cursor: pointer;
+        height: 15px;
+        width: 15px;
+        margin: 0 2px;
+        background-color: #bbb;
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+      }
+      
+      .active, .dot:hover {
+        background-color: #717171;
+      }
+      
+      /* Fading animation */
+      .fade {
+        -webkit-animation-name: fade;
+        -webkit-animation-duration: 1.5s;
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+      
+      @-webkit-keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      @keyframes fade {
+        from {opacity: .4} 
+        to {opacity: 1}
+      }
+      
+      /* On smaller screens, decrease text size */
+      @media only screen and (max-width: 300px) {
+        .prev, .next,.text {font-size: 11px}
+      }
+      </style>
+
+
+</head>
+<body id="flight">
+    <div class="w3-top">
+        <div class="w3-bar w3-black">
+          <!-- Navigation Bar -->
+          <span class="heading w3-bar-item w3-mobile" style="font-family: 'Times New Roman', Times, serif;font-size:xx-large; text-align: left;"><strong>VERMILLION     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Book A Flight</strong></span>
+          <span class="w3-right w3-mobile">
+          <a href="#" class="w3-bar-item w3-button w3-hover-aqua"style="font-size: x-large;">Home</a>
+          <a href="#contact" class="w3-bar-item w3-button w3-hover-brown" style="font-size: x-large;">Contact</a>
+         
+          </span>
+        </div>
+      </div>
+    <br><br>
+    
+
+    <!-- Slideshow -->
+    
+    <div class="slideshow-container">
+
+      <div class="mySlides fade">
+        <div class="numbertext">1 / 3</div>
+        <img src="images/flightbook/image2.jpeg" style="width:100%">
+        <div class="text">Caption Text</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">2 / 3</div>
+        <img src="images/flightbook/image4.jpg" style="width:100%">
+        <div class="text">Caption Two</div>
+      </div>
+      
+      <div class="mySlides fade">
+        <div class="numbertext">3 / 3</div>
+        <img src="images/flightbook/image3.jpg" style="width:100%">
+        <div class="text">Caption Three</div>
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+      </div>
+      <br>
+      
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span> 
+        <span class="dot" onclick="currentSlide(2)"></span> 
+        <span class="dot" onclick="currentSlide(3)"></span> 
+      </div>
+      
+    
+
+    <div class="w3-container w3-center">
+    <section class="w3-purple w3-hover-opacity">
+    <button class="w3-button w3-border-yellow w3-xlarge w3-centered " onclick="document.getElementById('start-modal').style.display='block'">Book Flight</button>
+    </section>
+    </div>
+    <br><br>
+
+
+    <!-- Contact -->
+
+
+
+        <button onclick="accFunction('contact')" class="w3-button w3-block w3-left-align w3-black">
+            <strong><center><h3>Need Help! Click here to connect.</h3></center></strong></button>
+    
+    <div id="contact" class="w3-container w3-hide">
+     
+       
+        <form  class="w3-container w3-card-4 w3-light-grey w3-brown w3-margin">
+            <h3 class="w3-center">Fill Your Details</h3>
+             
+            <div class="w3-row w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                <div class="w3-rest">
+                  <input class="w3-input w3-border" name="first" type="text" placeholder="First Name">
+                </div>
+            </div>
+            
+            <div class="w3-row w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+                <div class="w3-rest">
+                  <input class="w3-input w3-border" name="last" type="text" placeholder="Last Name">
+                </div>
+            </div>
+            
+            <div class="w3-row w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+                <div class="w3-rest">
+                  <input class="w3-input w3-border" name="email" type="text" placeholder="Email">
+                </div>
+            </div>
+            
+            <div class="w3-row w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+                <div class="w3-rest">
+                  <input class="w3-input w3-border" name="phone" type="text" placeholder="Phone">
+                </div>
+            </div>
+            
+            <div class="w3-row w3-section">
+              <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+                <div class="w3-rest">
+                  <input class="w3-input w3-border" name="message" type="text" placeholder="Message">
+                </div>
+            </div>
+            
+            <button class="w3-button w3-block w3-section w3-brown w3-ripple w3-padding" onclick="Display_Message()">Submit</button>
+            
+            </form>
+
+
+    </div>
+
+
+    <!-- Modal -->
+
+    <div id="start-modal" class="w3-modal">
+
+      <div class="w3-modal-content">
+    
+         <header class="w3-container w3-purple"
+         >
+        
+         <span class="w3-closebtn" onclick="document.getElementById('start-modal').style.display='none'">&times;</span>
+         <h2>Book Your Flights</h2>
+    
+          <div class="w3-container">
+    
+            <form>
+                 <div class="w3-section">
+                   <label>Name</label>
+                   <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Your Namer">
+                 </div>
+    
+    
+    
+                 <div class="w3-section">
+                  <label>Email</label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Your Email">
+                </div>
+
+
+                <div class="w3-section">
+                  <label>Phone Number</label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="text" placeholder="Enter Your Phone Number">
+                </div>
+
+                <div class="w3-section">
+                  <label>Date Of Travel</label>
+                  <input class="w3-input w3-border w3-margin-bottom" type="date">
+                </div>
+
+                <div class="w3-section">
+                  <label>Preferred Class</label>
+                  <select class="w3-input w3-border w3-margin-bottom" placeholder="Select Your Class">
+
+                    <option value="economy">Economy</option>
+                    <option value="executive">Executive</option>
+                    <option value="first_class">First Class</option>
+
+                    </select>
+                </div>
+    
+    
+    
+    
+                <button class="w3-black w3-btn-block w3-section w3-padding" onclick="Display_Message()">Find Flights</button>
+            </form>
+    
+    
+    
+          </div>
+        
+        </header>
+      </div>
+    
+    </div>
+
+    <footer class="w3-black w3-padding-xlarge w3-center">
+
+        <p>Vermillion Services &copy; 2021</p>
+       
+       </footer>
+
+       <script>
+        function accFunction(id) {
+          var x = document.getElementById(id);
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else {
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        
+        function Display_Message()
+        {
+          window.alert("Your details have been submitted");
+        }
+
+        
+        </script>
+  
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+      
+</body>
+</html>
